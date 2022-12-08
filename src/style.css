@@ -23,11 +23,10 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    /* padding: 70px 15px 0; */
 }
 
 .photo-card {
-    width: calc((100% - 2 * 10px) / 3);
+    width: calc((100% - 3 * 10px) / 4);
     height: 360px;
 }
 
@@ -39,7 +38,7 @@
 .info {
         display: flex;
         text-align: center;
-        gap: 40px;
+        gap: 30px;
         justify-content: center;
     }
 
