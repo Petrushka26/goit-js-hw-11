@@ -1,0 +1,41 @@
+.wrapper {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    background-color: rgb(76, 9, 185);
+}
+
+.search-form {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.gallery {
+    margin-top: 60px;
+    display:  flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.info {
+    display: flex;
+    gap: 10px;
+}
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-found {
+    width: 100%;
+    height: 165px;
+}
+
+.load-more {
+    display: block;
+    margin: 0 auto;
+}
