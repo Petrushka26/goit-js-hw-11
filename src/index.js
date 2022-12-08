@@ -3,11 +3,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { createMarkUp } from './js/markup';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
-const form = document.querySelector('#search-form');
-const input = document.querySelector('#search-form input');
-const btnLoad = document.querySelector('.load-more');
-const imgGallery = document.querySelector('.gallery');
+import { form, input, btnLoad, imgGallery } from './js/const';
 
 form.addEventListener('submit', onFormImg);
 btnLoad.addEventListener('click', onBtnLoad);
@@ -43,6 +39,7 @@ async function onFormImg(event) {
     Notify.info("We're sorry, but you've reached the end of search results.");
     createMarkUp(img);
     Notify.success(`Hooray! We found ${img.totalHits} images.`);
+    lightbox.refresh();
     return;
   }
   Notify.success(`Hooray! We found ${img.totalHits} images.`);
@@ -61,6 +58,7 @@ async function onBtnLoad() {
     Notify.info("We're sorry, but you've reached the end of search results.");
     createMarkUp(imgLoad);
     Notify.success(`Hooray! We found ${imgLoad.totalHits} images.`);
+    lightbox.refresh();
     return;
   }
   Notify.success(`Hooray! We found ${imgLoad.totalHits} images.`);
